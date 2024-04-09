@@ -17,7 +17,7 @@ spec:
         app: flaskapp
     spec:
       containers:
-      - image: 09512/flaskapp-containerd:v1.1
+      - image: 09512/flaskapp-containerd:v1.0
         imagePullPolicy: IfNotPresent
         name: flaskapp-containerd
       
