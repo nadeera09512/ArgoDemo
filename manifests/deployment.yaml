@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flaskapp
+  name: flaskapp
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapp
+  strategy:
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+      - image: 09512/flaskapp-containerd:v1.0
+        imagePullPolicy: IfNotPresent
+        name: flaskapp-containerd
+      
