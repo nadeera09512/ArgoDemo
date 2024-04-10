@@ -10,5 +10,7 @@ spec:
   - port: 80
     protocol: TCP
     targetPort: 5000
+    nodePort: 31200
   selector:
     app: flaskapp
+  type: NodePort
