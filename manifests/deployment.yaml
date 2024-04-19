@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: flaskapp
-  name: flaskapp
+    app: nginx-demo-web
+  name: nginx-demo-web
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flaskapp
+      app: nginx-demo-web
   strategy:
   template:
     metadata:
       labels:
-        app: flaskapp
+        app: nginx-demo-web
     spec:
       containers:
-      - image: 09512/flaskapp-containerd:v1.0
+      - image: 172.25.199.222:5000/nginx-sample-web:1.121
         imagePullPolicy: IfNotPresent
         name: flaskapp-containerd
       
