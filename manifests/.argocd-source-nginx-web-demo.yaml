@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - 09512/nginx-sample-web:1.123
+  - 09512/nginx-sample-web:1.124
