@@ -17,7 +17,7 @@ spec:
         app: nginx-demo-web
     spec:
       containers:
-      - image: 172.25.199.222:5000/nginx-sample-web:1.121
+      - image: 09512/nginx-sample-web:1.121
         imagePullPolicy: IfNotPresent
         name: flaskapp-containerd
       
